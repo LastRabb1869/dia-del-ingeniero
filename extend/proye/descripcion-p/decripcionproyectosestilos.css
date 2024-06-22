@@ -15,7 +15,7 @@ body{
 .tittle{
   width: auto;
   height: 250px;
-  background-image: url(/IMAGENES/fondoPortada.png);
+  background-image: url(../imag/fondoPortada.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -45,7 +45,6 @@ padding-left: 1em;
 }
 
 section{
-
   display: flex;
   position: relative;
   margin-bottom: 2em;

@@ -1,3 +1,11 @@
+*{
+    max-width: 100%;
+}
+
+.body{
+    overflow-x: hidden;
+}
+
 .head{
     display: flex;
     align-items: center;
@@ -33,6 +41,10 @@
     background: #2c4264;
 }
 
+.navbar-toggle{
+    display: none;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -61,4 +73,85 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media screen and (max-width: 760px) {
+    .title {
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+
+    .sau {
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #50418f;
+        width: 100%;
+        left: -100%;
+        top: 63px;
+        transition: left 0.3s ease;
+    }
+
+    .navbar.show {
+        left: 0;
+    }
+
+    .navbar-toggle{
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+
+    .header{
+        height: 60vh;
+    }
+
+    .header, .content {
+        padding: 0 10px;
+    }
+
+    .box-container .box {
+        height: auto;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    p, .text-p {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .mission, .vission {
+        width: 100%;
+    }
+
+    .box{
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 30px;
+    }
+
+    p, .text-p {
+        font-size: 14px;
+    }
+
+    .box {
+        flex-basis: 100%;
+    }
 }
