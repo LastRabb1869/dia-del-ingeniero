@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Compatibilidad del Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ff6b6b;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4b4b;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff6b6b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .heart {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 10px;
+            background-color: #ff6b6b;
+            transform: rotate(-45deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .heart::before,
+        /* .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ff6b6b;
+        } */
+        /* .heart::before { */
+            /* top: -50px;
+            left: 20px;
+        } */
+        /* .heart::after { */
+            /* left: 50px;
+            top: 20px;
+        } */
+        .percentage {
+            position: absolute;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transform: rotate(45deg); /* Invertir la rotación */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Compatibilidad del Amor</h1>
+        <input type="text" id="name1" placeholder="Nombre 1">
+        <input type="text" id="name2" placeholder="Nombre 2">
+        <button onclick="calculateCompatibility()">Calcular Compatibilidad</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateCompatibility() {
+            const name1 = document.getElementById('name1').value;
+            const name2 = document.getElementById('name2').value;
+
+            if (name1 === '' || name2 === '') {
+                alert('Por favor, ingrese ambos nombres.');
+                return;
+            }
+
+            const compatibility = Math.floor(Math.random() * 101);
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <span>${name1}</span>
+                <div class="heart">
+                    <div class="percentage">${compatibility}%</div>
+                </div>
+                <span>${name2}</span>
+            `;
+        }
+    </script>
+</body>
+</html>
