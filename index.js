@@ -22,5 +22,3 @@ function showMessage() {
     alert("ADVERTENCIA: ¡Actualmente te encuentras visionando una versión PRELIMINAR, ten lo en cuenta! :D");
 }
 document.addEventListener("DOMContentLoaded", showMessage);
-
-console.log("Esto debe de estar funcionando...")

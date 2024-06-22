@@ -12,7 +12,7 @@ body {
     background: #50418f;
 }
 
-h2{
+h2 {
     margin-top: 30px;
 }
 
@@ -23,6 +23,7 @@ h2{
     height: 80vh !important;
     background: url(img/intento.jpg) no-repeat center;
     background-size: cover;
+    padding: 0 10px;
 }
 
 .head {
@@ -34,10 +35,11 @@ h2{
     position: fixed;
     width: 100%;
     z-index: 100;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .logo-head {
-    margin-left: 60px;
     height: 46px;
 }
 
@@ -90,18 +92,6 @@ h2{
     display: block;
 }
 
-.logo {
-    margin-left: 30px;
-    height: 40px !important;
-}
-
-.logo a {
-    text-decoration: none;
-    color: #ffff;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-
 .title {
     margin-bottom: 40px;
     font-size: 60px;
@@ -120,14 +110,14 @@ p {
     margin-bottom: 40px;
     font-size: 20px;
     color: #ffff;
-    padding: 0 100px;
+    padding: 0 10px;
 }
 
 .text-p {
     margin-bottom: 10px;
     font-size: 20px;
     color: #ffff;
-    padding: 0 100px;
+    padding: 0 10px;
 }
 
 .btn {
@@ -138,50 +128,53 @@ p {
     text-decoration: none;
     background: #342f51;
     font-weight: bold;
-    border:none;
-    position:relative;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
 }
 
-    .btn-home {
-        display: flex;
-    }
+.btn-home {
+    display: flex;
+}
 
-    .btn-home a {
-        margin: 0 10px;
-    }
+.btn-home a {
+    margin: 0 10px;
+}
 
-    .btn:hover{
-        background:#fff;
-        color:#342f51;
-        box-shadow: 0 0 20px 10px #342f51;
-    }
-    .btn:before,button:after{
-        content:'';
-        position:absolute;
-        top:0;
-        right:0;
-        height:2px;
-        width:0;
-        background:#342f51;
-        transition:400ms ease all;
-    }
-    .btn:after{
-        right:inherit;
-        top:inherit;
-        left:0;
-        bottom:0;
-    }
+.btn:hover {
+    background: #fff;
+    color: #342f51;
+    box-shadow: 0 0 20px 10px #342f51;
+}
 
-    .btn:hover:before,button:hover:after{
-        width:100%;
-        transition:800ms ease all;
-    }
+.btn:before, .btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #342f51;
+    transition: 400ms ease all;
+}
+
+.btn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn:hover:before, .btn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
 
 .content {
-    height: 60vh;
+    height: auto;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,7 +190,7 @@ p {
 }
 
 .our-proyects {
-    padding: 100px;
+    padding: 100px 10px;
     background: #1f1d1d;
 }
 
@@ -214,7 +207,7 @@ p {
     background: #101010;
     text-align: center;
     border-radius: 1rem;
-    box-shadow: 0 .3 5rem rgb(0, 0, 0, .5);
+    box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .5);
     margin: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -237,8 +230,8 @@ p {
 }
 
 .box-image {
-    width: 200px;
-    height: 140px;
+    width: 15rem;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -270,10 +263,24 @@ p {
     }
 
     .sau {
-        height: 120vh;
+        height: auto;
     }
 
     .navbar {
         display: none;
+    }
+
+    .header, .content {
+        padding: 0 10px;
+    }
+
+    .box-container .box {
+        height: auto;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    p, .text-p {
+        padding: 0 20px;
     }
 }
