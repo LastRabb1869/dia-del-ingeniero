@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    
+    
+}
+
+
+body, h1, h2, p, h3, h4, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9162a4; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: inline-block;
+}
+
+
+header {
+    background-color: #2f003d;
+    color: #FFFFFF; 
+    padding: 20px;
+    text-align: center;
+}
+
+head {
+    background-color: #ce89ff;
+    padding: 20px;
+    
+
+}
+
+/* SIGA VIENDO*/
+section {
+    padding: 20px;
+    border: 5px solid #800080;
+    margin: 20px 0;
+    background-color: #f8eafc;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #800080;
+    text-align: justify;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #d4d4d4;
+    text-align: justify;
+
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    margin-bottom: 3px;
+    color: #696969;
+    text-align: center;
+
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #696969;
+    text-align: justify;
+}
+
+/* LAS PICTURES*/
+figure {
+    text-align: center;
+}
+
+.OKAS {
+    text-align: center;
+
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.juanomequiere {
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #9370DB;
+}
+
+.juanomequiere img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.juanomequiere p {
+    padding: 10px;
+    background: #FFFFFF; 
+    margin: 0;
+    text-align: center;
+    color: #4B0082;
+}
+
+/* SIGA VIENDO METICHE */
+footer {
+    background-color: #2f003d; 
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    position:relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* ADAPTACI]ON PARA POBRES */
+@media (max-width: 768px) {
+    .juanomequiere {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .juanomequiere {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* I MISS U T_T */

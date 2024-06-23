@@ -2,30 +2,25 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
     vertical-align: baseline;
-    max-width: 100%;
+}
+
+.title{
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+}
+
+.title2{
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
 }
 
 body {
     text-align: center;
-    font-family: sans-serif;
     background: #50418f;
     overflow-x: hidden;
-}
-
-h2 {
-    margin-top: 30px;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh !important;
-    background: url(img/intento.jpg) no-repeat center;
-    background-size: cover;
-    padding: 0 10px;
 }
 
 .head {
@@ -48,12 +43,15 @@ h2 {
 .navbar {
     display: flex;
     margin-right: 10px;
+    transition: 800ms ease all;
+    outline: none;
+    cursor: pointer;
 }
 
 .navbar a {
     display: block;
     padding: 23px 20px;
-    color: #ffff;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
@@ -62,9 +60,28 @@ h2 {
 
 .navbar a:hover {
     background: #2c4264;
+    box-shadow: 0 0 20px 10px #342f51;
 }
 
-.navbar-toggle{
+.navbar::before, .navbar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #342f51;
+    transition: 400ms ease all;
+}
+
+.navbar::after{
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.navbar-toggle {
     display: none;
 }
 
@@ -98,31 +115,34 @@ h2 {
     display: block;
 }
 
-.title {
-    margin-bottom: 40px;
-    font-size: 60px;
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: url(img/intento.jpg) no-repeat center;
+    background-size: cover;
+    padding: 0 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #ffff;
+    color: #fff;
 }
 
 h3 {
     color: #2c4264;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 40px;
-    font-size: 20px;
-    color: #ffff;
-    padding: 0 10px;
-}
-
-.text-p {
+p, .text-p {
     margin-bottom: 10px;
-    font-size: 20px;
-    color: #ffff;
+    font-size: 1.25rem;
+    color: #fff;
     padding: 0 10px;
 }
 
@@ -130,7 +150,7 @@ p {
     display: inline-block;
     margin-top: 1em;
     padding: 10px 40px;
-    color: #ffff;
+    color: #fff;
     text-decoration: none;
     background: #342f51;
     font-weight: bold;
@@ -140,14 +160,6 @@ p {
     transition: 800ms ease all;
     outline: none;
     margin-bottom: 2em;
-}
-
-.btn-home {
-    display: flex;
-}
-
-.btn-home a {
-    margin: 0 10px;
 }
 
 .btn:hover {
@@ -185,10 +197,11 @@ section {
 
 .mission, .vission {
     display: inline-block;
+    flex-direction: column;
     margin: 10px;
     padding: 20px;
     width: 40%;
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 10px;
 }
 
@@ -214,7 +227,7 @@ section {
 }
 
 .our-proyects {
-    padding: 100px 10px;
+    padding:20px 10px;
     background: #1f1d1d;
 }
 
@@ -242,7 +255,7 @@ section {
     line-height: 3rem;
     text-align: center;
     border-radius: 50%;
-    color: #ffff;
+    color: #fff;
     background: #0071ff;
     font-size: 2rem;
     margin: 1rem 0;
@@ -275,37 +288,31 @@ section {
 }
 
 .contact {
-    padding-top: 20px;
+    padding-top: 1.7em;
+    display: flex;
+    flex-direction: column;
     background: #171717;
     padding-bottom: 0;
 }
 
-@media screen and (max-width: 760px) {
-    .title {
-        margin-bottom: 0;
-        font-size: 40px;
-    }
-
-    .sau {
-        height: auto;
-    }
-
+@media screen and (max-width: 1024px) {
     .navbar {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        background: #50418f;
+        background: rgba(80, 65, 143, 0.95);
         width: 100%;
         left: -100%;
         top: 63px;
         transition: left 0.3s ease;
+        z-index: 1000;
     }
 
     .navbar.show {
         left: 0;
     }
 
-    .navbar-toggle{
+    .navbar-toggle {
         display: block;
         background: none;
         border: none;
@@ -313,18 +320,47 @@ section {
         font-size: 30px;
         cursor: pointer;
         margin: 10px;
+        z-index: 1001;
     }
 
     .dropdown-content {
         position: relative;
     }
 
-    .header{
+    .header {
         height: 60vh;
     }
 
-    .header, .content {
-        padding: 0 10px;
+    h2 {
+        font-size: 2rem;
+    }
+
+    p, .text-p {
+        font-size: 1rem;
+    }
+
+    .mission, .vission {
+        width: 80%;
+    }
+
+    .box-container .box {
+        height: auto;
+        width: 90%;
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title{
+        margin-top: 5.4em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        height: 50vh;
     }
 
     .box-container .box {
@@ -333,30 +369,33 @@ section {
         margin: 1rem 0;
     }
 
-    p, .text-p {
-        padding: 0 20px;
+    .navbar a {
+        padding: 15px 10px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .header {
+        height: 40vh;
+    }
+
+    .box-container .box {
+        height: auto;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .navbar a {
+        padding: 15px 5px;
         font-size: 16px;
     }
 
     .mission, .vission {
         width: 100%;
-    }
-
-    .box{
-        flex-basis: calc(50% - 40px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .title {
-        font-size: 30px;
-    }
-
-    p, .text-p {
-        font-size: 14px;
-    }
-
-    .box {
-        flex-basis: 100%;
     }
 }

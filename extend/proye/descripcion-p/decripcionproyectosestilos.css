@@ -163,66 +163,6 @@ section img {
     box-shadow: 0 0 20px 10px #0c0b0a;
   }
 
-.enlace button{
-  background:#C18b15;
-  color:#fff;
-  margin-top: 1em;
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border:none;
-  position:relative;
-  height:4em;
-  width: 9em;
-  font-size:20px;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-}
-  .enlace button:hover{
-    background:#fff;
-    color:#C18B15;
-    box-shadow: 0 0 20px 10px #7b4d18;
-  }
-  .enlace button:before,button:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background:#C18b15;
-    transition:400ms ease all;
-  }
-  .enlace button:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .enlace button:hover:before,button:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
-
-.salida{
-  border-top: #C18b15 4px solid;
-  justify-content: left;
-  display: flex;
-}
-.salida button{
-  position: absolute;
-  bottom: 1em;
-  background:#C18b15;
-  color:#fff;
-  margin-top: 1em;
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border:none;
-  position:relative;
-  height:4em;
-  width: 9em;
-  font-size:20px;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
+.space{
+  margin-bottom: 2em;
 }
