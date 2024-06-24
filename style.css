@@ -19,7 +19,7 @@
 
 body {
     text-align: center;
-    background: #50418f;
+    background-color: #9162a4;
     overflow-x: hidden;
 }
 
@@ -352,7 +352,7 @@ section {
 
 @media screen and (max-width: 768px) {
     .title{
-        margin-top: 5.4em;
+        margin-top: 9em;
     }
 
     h2 {
@@ -376,6 +376,11 @@ section {
 }
 
 @media screen and (max-width: 480px) {
+
+    .title{
+        margin-top: 9em;
+    }
+
     h2 {
         font-size: 1.25rem;
     }

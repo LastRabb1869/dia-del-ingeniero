@@ -3,10 +3,7 @@
     padding: 0;
     border: 0;
     font-size: 100%;
-    
-    
 }
-
 
 body, h1, h2, p, h3, h4, img {
     margin: 0;
@@ -16,14 +13,13 @@ body, h1, h2, p, h3, h4, img {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #9162a4; 
+    background-color: #9162a4;
     color: #ffffff; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
     display: inline-block;
 }
-
 
 header {
     background-color: #2f003d;
@@ -35,8 +31,6 @@ header {
 head {
     background-color: #ce89ff;
     padding: 20px;
-    
-
 }
 
 /* SIGA VIENDO*/
@@ -105,7 +99,6 @@ figure {
 
 }
 
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -147,7 +140,7 @@ footer {
     bottom: 0;
 }
 
-/* ADAPTACI]ON PARA POBRES */
+/* ADAPTACION PARA POBRES */
 @media (max-width: 768px) {
     .juanomequiere {
         flex: 1 1 45%;

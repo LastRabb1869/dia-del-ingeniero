@@ -78,8 +78,6 @@ section img {
   text-align: center;
   margin-bottom: 2em;
   gap: 10%;
-  border-top: 4px solid;
-  border-color: #c18b15;
 }
 
 .datos {
@@ -112,6 +110,11 @@ section img {
   font-weight: bold;
 }
 
+.descarga, .titulo, .descripcion{
+  border-top: 4px solid;
+  border-color: #422d96;
+}
+
 .descarga{
   display: grid;
   grid-template-columns: 65% 30%;
@@ -121,8 +124,6 @@ section img {
   align-content: center;
   text-align: center;
   margin-bottom: 2em;
-  border-top: 4px solid;
-  border-color: #c18b15;
   gap: 5%;
 }
 
