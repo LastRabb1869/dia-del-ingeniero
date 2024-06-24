@@ -3,6 +3,8 @@
     padding: 0;
     border: 0;
     max-width: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 body {
@@ -155,7 +157,6 @@ body {
     display: flex;
   }
   .salida button{
-    position: absolute;
     bottom: 1em;
     background:#342f51;
     color:#fff;
@@ -229,8 +230,8 @@ body {
 
 @media screen and (max-width: 768px) {
     h2 {
-        font-size: 1.5rem;
-    }
+        font-size: 1.8rem;
+    }    
 
     .header {
         height: 50vh;
