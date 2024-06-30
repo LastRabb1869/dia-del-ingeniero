@@ -1,0 +1,153 @@
+/* Esto es la parte de la barra */
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background: #5a276d; */
+    background-image: linear-gradient(135deg,#00B7D4, #505488, 
+    #2F3F80, #161569, #5A4894, #A950A1, #FF7CAE);
+    background-size: 500%;
+    animation: fanimado 60s infinite;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    background: #FF9E00;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+.menu li{
+    display: inline-block;
+    text-align:center;
+}
+.menu li a:hover{
+    background: #FF7F00;
+    transition: 0.8s ease;
+}
+/* Fin de la barra */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.titulo{
+    display: flex;
+    position: relative;
+    top: 1px;
+}
+
+.juego_cont{
+    border: #d40000 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #5a276d; */
+    background-image: linear-gradient(135deg,#00B7D4, #505488, 
+    #2F3F80, #161569, #5A4894, #A950A1, #FF7CAE);
+    background-size: 500%;
+    animation: fanimado 60s infinite;
+}
+.juego_cont2{
+    height:fit-content;
+    position: absolute;
+    top: 1em;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    background: #ac43d2;
+    padding: 40px 60px;
+}
+
+.boton {
+    position: relative;
+    bottom: 1px;
+}
+
+h2{
+    font-size: 3em;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.reseteo{
+    padding: 15px 20px;
+    color: #ac43d2;
+    background: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor:pointer;
+    font-weight: 600;
+    transition:1.5s ease all;
+}
+.reseteo:focus{
+    color: #fff;
+    background: #662a87;
+}
+.reseteo:hover{
+    scale: 1.05;
+}
+.reseteo:active{
+    scale: 0.8;
+}
+.juego{
+    width: 430px;
+    height: 430;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.item{
+    position: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #fff;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+.item::after{
+content: '';
+position: absolute;
+inset: 0;
+background: #921294;
+transition: 0.25s;
+transform: rotateY(0deg);
+backface-visibility: hidden;
+}
+.boxOpen:after ,
+.boxMatch:after
+{
+    transform: rotateY(180deg);
+}
+/* Cosas del animado del fondo NO TOCAR */
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

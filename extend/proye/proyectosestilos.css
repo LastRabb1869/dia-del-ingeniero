@@ -5,7 +5,7 @@ body{
 .titulo{
     width: auto;
     height: 250px;
-    background-image: url(imag/fondoPortada.png);
+    background-image: url(/IMAGENES/fondoPortada.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -55,9 +55,24 @@ section{
 }
 
 ::-webkit-scrollbar {
-    display: none;
-}
-
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #171315; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #171315;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #171315; 
+  }
+  
 .scroll-horizontal {
     display: flex;
     height: auto;
@@ -81,7 +96,6 @@ section{
     scroll-snap-align: center;
     margin: 50px 15px 0;
     display: inline-flex; /* Cambiado a inline-flex *//* Añadido para centrar contenido horizontalmente */
-    opacity: .8;
 }
 
 .tarjeta2 {

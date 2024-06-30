@@ -48,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-.navbar a {
+.navbar a, .navbar p {
     display: block;
     padding: 23px 20px;
     color: #fff;
@@ -58,7 +58,7 @@ body {
     position: relative;
 }
 
-.navbar a:hover {
+.navbar a:hover, .navbar p:hover {
     background: #2c4264;
     box-shadow: 0 0 20px 10px #342f51;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+    <link rel="stylesheet" type="text/css" href="juego.css">
+</head>
+<body>
+        <!-- Inicio de la barra -->
+         <!--
+        <main>
+            <ul class="lateral">
+            <ul class="menu">
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="gracias.html">Agradecimientos</a></li>
+            <li><a href="info.html">¿Porque hicimos esto?</a></li>
+            <li><a href="juego.html">Juego</a></li>
+            </ul>
+        -->
+        <!-- Fin de la barra -->
+
+    <div><center>
+    <div class="juego_cont">
+        <div class="juego_cont2">
+            <div class ="titulo"> <h2>Juego de memoria</h2> </div>
+        <div class="juego"></div>
+            <script>
+                const animales = ["🐶","🐶","😻","😻","🐢","🐢","🐥","🐥","🦢","🦢","🦚","🦚","🦴","🦴","🎣","🎣"];
+                var shuf_animales = animales.sort(() => (Math.random() > .5) ? 2 : -1);
+                for ( var i =0; i<animales.length; i++){
+                    let box = document.createElement('div') 
+                    box.className = 'item';
+                    box.innerHTML = shuf_animales[i]
+                    
+                    box.onclick = function(){
+                        this.classList.add('boxOpen')
+                    
+                            setTimeout(function(){
+                            if(document.querySelectorAll('.boxOpen').length > 1){
+                                if(document.querySelectorAll('.boxOpen')[0].innerHTML == 
+                                    document.querySelectorAll('.boxOpen')[1].innerHTML){
+                                    document.querySelectorAll('.boxOpen')[0].classList.add
+                                    ('boxMatch')
+                                    document.querySelectorAll('.boxOpen')[1].classList.add
+                                    ('boxMatch')
+
+                                    document.querySelectorAll('.boxOpen')[1].classList.remove
+                                    ('boxOpen')
+                                    document.querySelectorAll('.boxOpen')[0].classList.remove
+                                    ('boxOpen')
+
+                                    if(document.querySelectorAll('.boxMatch').length == animales.length){
+                                        alert('Felicidades Ganaste')
+                                    }
+                                        }else{
+                                    document.querySelectorAll('.boxOpen')[1].classList.remove
+                                    ('boxOpen')
+                                    document.querySelectorAll('.boxOpen')[0].classList.remove
+                                    ('boxOpen')
+
+                                    }
+                                }
+                            },500)
+                        }
+                        document.querySelector('.juego').appendChild(box);
+                    }   
+                    
+        
+
+            </script>
+
+            <div class = "boton">
+                <button class="reseteo" onclick="window.location.reload()">Reintentar</button>
+            </div>
+
+        </div>
+    </div>
+</center></div>
+</main>
+</body>
+</html>
