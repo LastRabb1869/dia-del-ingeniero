@@ -120,7 +120,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background: url(img/intento.jpg) no-repeat center;
+    background: url(img/escuela_2.jpg) no-repeat center;
     background-size: cover;
     padding: 0 10px;
 }
@@ -193,6 +193,14 @@ p, .text-p {
 
 section {
     padding: 50px 0;
+}
+
+.mission{
+    background: url(img/mission.jpg) no-repeat center;
+}
+
+.vission{
+    background: url(img/vission.jpg) no-repeat center;
 }
 
 .mission, .vission {
