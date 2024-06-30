@@ -99,6 +99,7 @@ body {
 .navbar-toggle.open {
     transform: rotate(180deg);
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -121,7 +122,7 @@ body {
 .dropdown-content.show {
     display: block;
     opacity: 1;
-    max-height: 500px; /* Ajusta según sea necesario */
+    max-height: 500px; /* Ajustese SOLO en caso de ser necesario */
 }
 
 .dropdown-content a {
@@ -158,10 +159,17 @@ h2 {
     color: #fff;
 }
 
-h3 {
+h3, .mission h3, .vission h3 {
     color: #2c4264;
-    font-size: 1.25rem;
     margin-bottom: 10px;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
+.mission h3, .vission h3{
+    font-size: 2em;
 }
 
 p, .text-p {
@@ -402,6 +410,10 @@ section {
         margin: 1rem 0;
     }
 
+    .box-container.pictures{
+        width: 50%;
+    }
+
     .navbar a, .navbar button {
         padding: 15px 10px;
         font-size: 18px;
@@ -425,6 +437,10 @@ section {
         height: auto;
         width: 100%;
         margin: 1rem 0;
+    }
+
+    .box-container.pictures{
+        width: 50%;
     }
 
     .navbar a, .navbar button {

@@ -80,3 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const confirmLinks = document.querySelectorAll('.confirm-link');
+
+    confirmLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            const userConfirmed = confirm('ADVERTENCIA: Serás redirigido a otra página, ¿Estás seguro?');
+            if (!userConfirmed) {
+                event.preventDefault();
+            }
+        });
+    });
+});
