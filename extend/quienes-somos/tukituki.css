@@ -29,8 +29,14 @@ header {
 }
 
 head {
+    font-size: 10em;
     background-color: #ce89ff;
     padding: 20px;
+}
+
+.img_head{
+    width: 60%;
+    height: 100%;
 }
 
 /* SIGA VIENDO*/
