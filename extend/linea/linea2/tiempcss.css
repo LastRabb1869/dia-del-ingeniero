@@ -61,7 +61,7 @@ body{
 
 .text-box{
     padding: 20px 30px;
-    
+    border: #040000;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -75,6 +75,21 @@ body{
 .two{
     background-image: url(img-linea/tupalumnos2.png);
     color: #040000;
+}
+
+.three{
+    background-image: url(img-linea/proyectos-python.png);
+    color: #fff;
+}
+
+.four{
+    background-image: url(img-linea/promedios.png);
+    color: #040000; 
+}
+
+.five{
+    background-image: url(img-linea/pilaresPOO.jpg);
+    color: #fff; 
 }
 
 .text-box h2{
