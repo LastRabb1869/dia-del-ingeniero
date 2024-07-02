@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showMessage() {
-    alert("ADVERTENCIA: ¡Actualmente te encuentras visionando una versión PRELIMINAR, ten lo en cuenta! :D");
+    alert("Si estás viendo esto, es que la página funciona. De parte de SisCum Inc. ¡SE BIENVENIDO! :D");
 }
 document.addEventListener("DOMContentLoaded", showMessage);
 

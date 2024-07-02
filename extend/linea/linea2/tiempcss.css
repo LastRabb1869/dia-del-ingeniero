@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+.h2, .small{
+    background-color: #2e364abb;
+}
+
+.description{
+    margin-top: 2em;
+    color: #fff;
+}
+
 body{
     background: #2e364a;
 }
@@ -52,10 +61,20 @@ body{
 
 .text-box{
     padding: 20px 30px;
-    background: #fff;
+    
     position: relative;
     border-radius: 6px;
     font-size: 15px;
+}
+
+.one{
+    background-image: url(img-linea/brazo.jpg);
+    color: #fff;
+}
+
+.two{
+    background-image: url(img-linea/tupalumnos2.png);
+    color: #040000;
 }
 
 .text-box h2{
